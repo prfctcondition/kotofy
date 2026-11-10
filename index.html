@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kotofy</title>
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#E2E8F0] text-[#142347] antialiased selection:bg-indigo-500/20 selection:text-[#142347] overflow-hidden select-none" oncontextmenu="return false;">
+    <script>
+      window.addEventListener('error', function(e) {
+        var el = document.getElementById('fatal-error');
+        if (!el) {
+          el = document.createElement('div');
+          el.id = 'fatal-error';
+          el.style.cssText = 'position:fixed;inset:0;background:#142347;color:#fff;padding:24px;font-family:monospace;white-space:pre-wrap;z-index:999999;overflow:auto;';
+          document.body.appendChild(el);
+        }
+        el.innerHTML = '<h2 style="color:#ef4444;margin:0 0 12px 0;">Kotofy Startup Error</h2><pre style="background:rgba(0,0,0,0.3);padding:12px;border-radius:8px;">' +
+          (e.error && e.error.stack ? e.error.stack : (e.message + ' at ' + e.filename + ':' + e.lineno)) + '</pre>';
+      });
+    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

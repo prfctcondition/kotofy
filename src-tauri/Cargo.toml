@@ -1,0 +1,34 @@
+[package]
+name = "kotofy"
+version = "0.1.0"
+edition = "2021"
+description = "Kotofy — Ultra-low-latency gaming macro engine with Nordic Liquid Glass UI"
+
+[lib]
+name = "kotofy_lib"
+crate-type = ["rlib"]
+
+[dependencies]
+tauri = { version = "2.2", features = ["custom-protocol", "tray-icon"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+windows-sys = { version = "0.61.2", features = [
+    "Win32_Foundation",
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_UI_Input_KeyboardAndMouse",
+    "Win32_UI_Accessibility",
+    "Win32_System_Threading",
+    "Win32_System_ProcessStatus",
+    "Win32_System_Diagnostics_ToolHelp",
+    "Win32_System_LibraryLoader",
+    "Win32_System_Performance",
+    "Win32_Media",
+    "Win32_Graphics_Gdi",
+] }
+crossbeam-channel = "0.5"
+parking_lot = "0.12"
+dirs = "6.0"
+uuid = { version = "1.11", features = ["v4", "serde"] }
+
+[build-dependencies]
+tauri-build = { version = "2.0", default-features = false }

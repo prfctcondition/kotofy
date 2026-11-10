@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Production builds
+dist/
+dist-ssr/
+*.local
+
+# Tauri & Rust artifacts
+target/
+src-tauri/target/
+installer_output/
+*.exe
+WebView2Loader.dll
+libunwind.dll
+run_log.txt
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
