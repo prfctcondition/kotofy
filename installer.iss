@@ -2,7 +2,7 @@
 ; Kotofy — Ultra-low-latency gaming macro engine with Nordic Liquid Glass UI
 
 #define MyAppName "Kotofy"
-#define MyAppVersion "1.0.0"
+#define MyAppVersion "0.1.0"
 #define MyAppPublisher "prfctcondition"
 #define MyAppURL "https://github.com/prfctcondition/kotofy"
 #define MyAppExeName "kotofy.exe"
